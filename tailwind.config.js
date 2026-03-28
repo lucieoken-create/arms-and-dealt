@@ -10,7 +10,7 @@ export default {
         offwhite: '#f0ede6',
       },
       fontFamily: {
-        serif: ['"Playfair Display"', 'Georgia', 'serif'],
+        serif: ['"Bebas Neue"', 'Impact', 'sans-serif'],
         sans: ['Inter', 'system-ui', 'sans-serif'],
       },
     },
