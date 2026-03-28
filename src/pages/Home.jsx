@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom'
 
 const OPERATION_CARDS = [
   {
-    icon: '💪',
+    icon: '♣',
     title: 'Arms Acquisition',
     desc: 'We source only the finest arms in the business. Biceps-grade and built to impress.',
   },
@@ -13,7 +13,7 @@ const OPERATION_CARDS = [
     desc: 'Our dealers operate with precision and poker faces. Every hand is played to win.',
   },
   {
-    icon: '🏋️',
+    icon: '♦',
     title: 'Field Operations',
     desc: 'Our operatives train hard. Arm day is non-negotiable. So is a healthy appreciation for mezgronis.',
   },
@@ -57,29 +57,33 @@ export default function Home() {
           {/* Logo */}
           <Link to="/" className="flex flex-col leading-none">
             <div className="flex items-center gap-2">
-              <span className="text-xl text-gold select-none" title="crossed dumbbells">
-                🏋️
-              </span>
-              <span className="font-serif text-lg sm:text-xl font-bold tracking-widest text-gold uppercase">
+              <span className="text-gold/70 text-base select-none leading-none">♠</span>
+              <span className="font-serif text-xl sm:text-2xl tracking-[0.1em] text-gold uppercase leading-none">
                 Arms &amp; Dealt
               </span>
             </div>
-            <span className="text-[10px] tracking-[0.3em] text-gold/50 uppercase pl-8">
+            <span className="text-[10px] tracking-[0.3em] text-gold/50 uppercase pl-5 mt-0.5">
               We deal in arms.
             </span>
           </Link>
 
           {/* Nav links */}
-          <div className="hidden sm:flex items-center gap-6 text-xs tracking-widest uppercase text-offwhite/70">
-            <a href="#operation" className="hover:text-gold transition-colors duration-200">
+          <div className="hidden sm:flex items-center gap-6">
+            <a
+              href="#operation"
+              className="font-serif text-sm tracking-[0.12em] uppercase text-offwhite/60 hover:text-gold transition-colors duration-200"
+            >
               The Operation
             </a>
-            <a href="#intel" className="hover:text-gold transition-colors duration-200">
+            <a
+              href="#intel"
+              className="font-serif text-sm tracking-[0.12em] uppercase text-offwhite/60 hover:text-gold transition-colors duration-200"
+            >
               Intel
             </a>
             <Link
               to="/apply"
-              className="px-4 py-2 border border-gold/50 text-gold hover:bg-gold/10 transition-all duration-200 tracking-widest"
+              className="font-serif text-sm tracking-[0.12em] uppercase px-4 py-2 border border-gold/50 text-gold hover:bg-gold/10 transition-all duration-200"
             >
               Join Us
             </Link>
@@ -88,7 +92,7 @@ export default function Home() {
           {/* Mobile join link */}
           <Link
             to="/apply"
-            className="sm:hidden px-3 py-1.5 border border-gold/50 text-gold text-xs tracking-widest uppercase hover:bg-gold/10 transition-all duration-200"
+            className="sm:hidden font-serif text-sm tracking-[0.12em] uppercase px-3 py-1.5 border border-gold/50 text-gold hover:bg-gold/10 transition-all duration-200"
           >
             Join Us
           </Link>
@@ -115,9 +119,9 @@ export default function Home() {
             </span>
           </div>
 
-          <h1 className="font-serif text-4xl sm:text-6xl lg:text-7xl font-black text-offwhite leading-tight tracking-tight mb-6">
+          <h1 className="font-serif text-6xl sm:text-8xl lg:text-9xl text-offwhite leading-none tracking-[0.05em] mb-6">
             ARE YOU{' '}
-            <span className="text-gold italic">BUILT</span>
+            <span className="text-gold">BUILT</span>
             <br />
             FOR THIS BUSINESS?
           </h1>
@@ -128,7 +132,7 @@ export default function Home() {
 
           <Link
             to="/apply"
-            className="btn-gold inline-block bg-gold text-navy font-bold text-sm tracking-[0.3em] uppercase px-10 py-4 hover:bg-gold/90 transition-colors duration-200"
+            className="btn-gold inline-block bg-gold text-navy font-serif text-lg tracking-[0.15em] uppercase px-10 py-3 hover:bg-gold/90 transition-colors duration-200"
           >
             Apply for Arms
           </Link>
@@ -156,7 +160,7 @@ export default function Home() {
             <p className="text-gold/60 text-xs tracking-[0.4em] uppercase mb-3">
               ♠ Classified Briefing ♠
             </p>
-            <h2 className="font-serif text-3xl sm:text-5xl font-bold text-offwhite">
+            <h2 className="font-serif text-5xl sm:text-7xl tracking-[0.06em] text-offwhite">
               What We Do
             </h2>
             <div className="mt-4 w-16 h-px bg-gold/40 mx-auto" />
@@ -194,11 +198,12 @@ export default function Home() {
                     </div>
 
                     {/* Front face */}
-                    <div className="card-face card-face-front bg-charcoal border border-gold/30 rounded-sm p-6 flex flex-col justify-center items-start gap-4"
+                    <div
+                      className="card-face card-face-front border border-gold/30 rounded-sm p-6 flex flex-col justify-center items-start gap-4"
                       style={{ background: 'linear-gradient(135deg, #1a1f2e 0%, #141824 100%)' }}
                     >
-                      <div className="text-4xl">{card.icon}</div>
-                      <h3 className="font-serif text-xl font-bold text-gold">{card.title}</h3>
+                      <div className="text-5xl text-gold/60 select-none leading-none">{card.icon}</div>
+                      <h3 className="font-serif text-2xl tracking-[0.08em] text-gold">{card.title}</h3>
                       <p className="text-offwhite/70 text-sm leading-relaxed">{card.desc}</p>
                       <div className="text-gold/20 text-xs mt-auto self-end">♠</div>
                     </div>
@@ -231,7 +236,7 @@ export default function Home() {
             <p className="text-gold/60 text-xs tracking-[0.4em] uppercase mb-3">
               ♦ Verified Intel ♦
             </p>
-            <h2 className="font-serif text-3xl sm:text-5xl font-bold text-offwhite">
+            <h2 className="font-serif text-5xl sm:text-7xl tracking-[0.06em] text-offwhite">
               Field Reports
             </h2>
             <div className="mt-4 w-16 h-px bg-gold/40 mx-auto" />
@@ -241,32 +246,22 @@ export default function Home() {
             {TESTIMONIALS.map((t, i) => (
               <div
                 key={i}
-                className="relative bg-charcoal/60 border border-gold/15 p-6 rounded-sm"
+                className="relative border-t-2 border-gold/40 border-x border-b border-gold/15 p-6"
                 style={{ background: 'linear-gradient(160deg, #181c28 0%, #111520 100%)' }}
               >
-                {/* Redacted stripe top */}
-                <div className="flex gap-1 mb-4">
-                  {[...Array(6)].map((_, j) => (
-                    <div
-                      key={j}
-                      className="h-1.5 rounded-full bg-gold/20"
-                      style={{ width: `${[40,20,60,30,50,25][j]}px` }}
-                    />
-                  ))}
-                </div>
+                {/* Suit symbol header */}
+                <div className="text-gold text-3xl mb-5 select-none pt-2 leading-none">{t.suit}</div>
 
-                <div className="text-gold/40 text-2xl mb-3 select-none">{t.suit}</div>
-
-                <blockquote className="text-offwhite/80 text-sm leading-relaxed italic mb-6 font-light">
+                <blockquote className="text-offwhite/80 text-sm leading-relaxed italic mb-8 font-light">
                   &ldquo;{t.quote}&rdquo;
                 </blockquote>
 
-                <div className="border-t border-gold/10 pt-4">
-                  <p className="text-gold text-xs font-semibold tracking-widest uppercase">
+                <div className="border-t border-gold/15 pt-5">
+                  <p className="font-serif text-gold text-xl tracking-[0.08em] leading-tight">
                     — {t.name}
                   </p>
                   {t.title && (
-                    <p className="text-offwhite/40 text-xs tracking-wider mt-1">{t.title}</p>
+                    <p className="font-sans text-offwhite/35 text-xs tracking-wider mt-2">{t.title}</p>
                   )}
                 </div>
 
@@ -288,7 +283,7 @@ export default function Home() {
             </p>
             <Link
               to="/apply"
-              className="btn-gold inline-block border border-gold text-gold text-xs font-semibold tracking-[0.3em] uppercase px-8 py-3 hover:bg-gold/10 transition-colors duration-200"
+              className="btn-gold inline-block border border-gold text-gold font-serif text-base tracking-[0.15em] uppercase px-8 py-2.5 hover:bg-gold/10 transition-colors duration-200"
             >
               Submit Your Dossier
             </Link>
@@ -309,7 +304,7 @@ export default function Home() {
             <span>♦</span>
           </div>
 
-          <div className="font-serif text-gold/70 text-sm mb-3 tracking-wider">
+          <div className="font-serif text-gold/70 text-xl tracking-[0.12em] mb-3">
             Arms &amp; Dealt
           </div>
 

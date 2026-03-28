@@ -42,19 +42,19 @@ export default function Apply() {
         <div className="max-w-6xl mx-auto px-4 sm:px-6 h-16 flex items-center justify-between">
           <Link to="/" className="flex flex-col leading-none">
             <div className="flex items-center gap-2">
-              <span className="text-xl text-gold select-none">🏋️</span>
-              <span className="font-serif text-lg sm:text-xl font-bold tracking-widest text-gold uppercase">
+              <span className="text-gold/70 text-base select-none leading-none">♠</span>
+              <span className="font-serif text-xl sm:text-2xl tracking-[0.1em] text-gold uppercase leading-none">
                 Arms &amp; Dealt
               </span>
             </div>
-            <span className="text-[10px] tracking-[0.3em] text-gold/50 uppercase pl-8">
+            <span className="text-[10px] tracking-[0.3em] text-gold/50 uppercase pl-5 mt-0.5">
               We deal in arms.
             </span>
           </Link>
 
           <Link
             to="/"
-            className="text-xs text-offwhite/50 hover:text-gold tracking-widest uppercase transition-colors duration-200"
+            className="font-serif text-sm tracking-[0.12em] text-offwhite/50 hover:text-gold uppercase transition-colors duration-200"
           >
             ← Back to Base
           </Link>
@@ -78,9 +78,9 @@ export default function Apply() {
             Limited Clearances Available
           </div>
 
-          <h1 className="font-serif text-4xl sm:text-6xl font-black text-offwhite tracking-tight leading-tight mb-6">
+          <h1 className="font-serif text-6xl sm:text-8xl text-offwhite leading-none tracking-[0.05em] mb-6">
             JOIN THE{' '}
-            <span className="text-gold italic">OPERATION</span>
+            <span className="text-gold">OPERATION</span>
           </h1>
 
           <p className="text-offwhite/60 text-base sm:text-lg tracking-wide font-light max-w-xl mx-auto">
@@ -102,7 +102,7 @@ export default function Apply() {
           >
             <div className="absolute top-0 left-0 right-0 h-0.5 bg-gradient-to-r from-transparent via-gold to-transparent" />
             <div className="text-gold text-3xl mb-4 font-serif">✓</div>
-            <h2 className="font-serif text-2xl sm:text-3xl font-bold text-gold mb-3 tracking-wider uppercase">
+            <h2 className="font-serif text-4xl sm:text-5xl text-gold mb-3 tracking-[0.08em] uppercase">
               Transmission Received
             </h2>
             <p className="text-offwhite/80 text-sm sm:text-base tracking-widest uppercase font-semibold leading-relaxed">
@@ -167,7 +167,7 @@ export default function Apply() {
                 <p className="text-gold/50 text-xs tracking-[0.4em] uppercase mb-1">
                   Ref: A&amp;D-APP-{new Date().getFullYear()}
                 </p>
-                <h2 className="font-serif text-2xl sm:text-3xl font-bold text-offwhite">
+                <h2 className="font-serif text-4xl sm:text-5xl text-offwhite tracking-[0.06em]">
                   Operative Dossier
                 </h2>
                 <p className="mt-2 text-offwhite/40 text-xs tracking-wider">
@@ -300,7 +300,7 @@ export default function Apply() {
               <div className="text-center">
                 <button
                   type="submit"
-                  className="btn-gold w-full sm:w-auto bg-gold text-navy font-bold text-sm tracking-[0.3em] uppercase px-12 py-4 hover:bg-gold/90 transition-colors duration-200"
+                  className="btn-gold w-full sm:w-auto bg-gold text-navy font-serif text-xl tracking-[0.15em] uppercase px-12 py-3 hover:bg-gold/90 transition-colors duration-200"
                 >
                   Submit Dossier
                 </button>
