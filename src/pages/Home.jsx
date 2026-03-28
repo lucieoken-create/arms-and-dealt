@@ -69,18 +69,18 @@ export default function Home() {
 
           {/* Nav links */}
           <div className="hidden sm:flex items-center gap-6">
-            <a
-              href="#operation"
+            <button
+              onClick={() => document.getElementById('operation').scrollIntoView({ behavior: 'smooth' })}
               className="font-serif text-sm tracking-[0.12em] uppercase text-offwhite/60 hover:text-gold transition-colors duration-200"
             >
               The Operation
-            </a>
-            <a
-              href="#intel"
+            </button>
+            <button
+              onClick={() => document.getElementById('intel').scrollIntoView({ behavior: 'smooth' })}
               className="font-serif text-sm tracking-[0.12em] uppercase text-offwhite/60 hover:text-gold transition-colors duration-200"
             >
               Intel
-            </a>
+            </button>
             <Link
               to="/apply"
               className="font-serif text-sm tracking-[0.12em] uppercase px-4 py-2 border border-gold/50 text-gold hover:bg-gold/10 transition-all duration-200"
