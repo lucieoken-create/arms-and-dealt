@@ -155,9 +155,13 @@ export default function Apply() {
         {!submitted && (
           <form
             onSubmit={handleSubmit}
+            name="recruitment"
+            data-netlify="true"
             className="relative border border-gold/25 rounded-sm overflow-hidden"
             style={{ background: 'linear-gradient(160deg, #12182a 0%, #0e1422 100%)' }}
           >
+            {/* Required for Netlify Forms + React SPA */}
+            <input type="hidden" name="form-name" value="recruitment" />
             {/* Gold top accent bar */}
             <div className="h-0.5 bg-gradient-to-r from-transparent via-gold to-transparent" />
 
