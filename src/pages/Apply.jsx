@@ -29,10 +29,23 @@ export default function Apply() {
     setForm((prev) => ({ ...prev, [name]: value }))
   }
 
+  const encode = (data) =>
+    Object.keys(data)
+      .map((key) => encodeURIComponent(key) + '=' + encodeURIComponent(data[key]))
+      .join('&')
+
   const handleSubmit = (e) => {
     e.preventDefault()
-    setSubmitted(true)
-    window.scrollTo({ top: 0, behavior: 'smooth' })
+    fetch('/', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
+      body: encode({ 'form-name': 'recruitment', ...form }),
+    })
+      .then(() => {
+        setSubmitted(true)
+        window.scrollTo({ top: 0, behavior: 'smooth' })
+      })
+      .catch((err) => console.error('Form submission error:', err))
   }
 
   return (
