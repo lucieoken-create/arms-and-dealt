@@ -11,6 +11,20 @@
     <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet" />
   </head>
   <body>
+    <!--
+      Hidden form for Netlify build-time detection.
+      Required because this is a React SPA — Netlify's crawler reads static
+      HTML, not JS-rendered output, so it won't find the form in Apply.jsx.
+      This form must mirror every field name in the live React form exactly.
+    -->
+    <form name="recruitment" data-netlify="true" hidden>
+      <input type="text"   name="codename" />
+      <input type="text"   name="preferredArm" />
+      <input type="text"   name="suit" />
+      <input type="text"   name="whyJoin" />
+      <input type="text"   name="howHeard" />
+    </form>
+
     <div id="root"></div>
     <script type="module" src="/src/main.jsx"></script>
   </body>
